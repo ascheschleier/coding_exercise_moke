@@ -109,25 +109,12 @@
       
       var objectjs = document.getElementById("object");
     
-      //Playclick
+      //random intervals
       var rand = 500 + Math.round(Math.random() * 2500);
-     
-      //old code
-      /*
-      var start_btn = document.getElementById("start_btn");
-      start_btn.onClick = function() {
-        start();
-        
-        //aender den button zu "stop"
-      } 
-      */
       
-       //Gamefunction
-
       /*  Timer start */
       function start() {
-        console.log("Game Starts");
-        
+        console.log("Game Starts");        
         
         if(!gameIsRunning){
           document.getElementById("start_btn").innerHTML = "Stop";
@@ -204,7 +191,6 @@
       }
     
       /* manipulation Code */
-
       //Form
       function obeject_shape(){
         if (Math.random()<=0.5){
@@ -234,8 +220,7 @@
 
         objectjs.style.top = p + '%';
         objectjs.style.left = q + '%';
-      }
-      
+      }      
       
       // butchered a copy&paste from https://stackoverflow.com/questions/19700283/how-to-convert-time-milliseconds-to-hours-min-sec-format-in-javascript
       function msToSec(duration) {
@@ -243,13 +228,7 @@
           seconds = Math.floor((duration / 1000) % 60);
 
         return seconds + "." + milliseconds;
-      }     
-      
-      /* var startTime = Date.now();
-      var interval = setInterval(function() {
-      var elapsedTime = Date.now() - startTime;
-          document.getElementById("timer").innerHTML = (elapsedTime / 1000).toFixed(3);}, 100); */
-                  
+      }          
     </script>
   </body>
 </html>
